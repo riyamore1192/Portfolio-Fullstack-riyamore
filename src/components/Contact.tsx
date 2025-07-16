@@ -98,7 +98,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-800">Location</h4>
-                  <p className="text-slate-600"></p>
+                  <p className="text-slate-600">Navsari,Gujrat</p>
                 </div>
               </div>
             </div>
@@ -114,17 +114,11 @@ const Contact = () => {
                   <Github className="w-6 h-6 text-slate-700" />
                 </a>
                 <a
-                  href="www.linkedin.com/in/riyamore-developer"
+                  href="https://www.linkedin.com/in/riyamore-developer/"
                   className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200"
                 >
                   <Linkedin className="w-6 h-6 text-blue-600" />
                 </a>
-                {/* <a
-                  href="https://twitter.com"
-                  className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200"
-                >
-                  <Twitter className="w-6 h-6 text-blue-400" />
-                </a> */}
               </div>
             </div>
           </div>
