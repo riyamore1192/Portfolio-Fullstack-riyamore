@@ -19,7 +19,7 @@ const Projects = () => {
       description: "A comprehensive task management application with user authentication, real-time updates, and intuitive drag-and-drop functionality. Features include task categorization, due dates, priority levels, and progress tracking.",
       image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "Node.js", "MySQL", "JWT", "Tailwind CSS"],
-      liveUrl: "https://todo-list-applition.netlify.app/login",
+      liveUrl: "todo-list-applition.netlify.app",
       githubUrl: "https://github.com/riyamore1192/To-do-list-app",
       icon: CheckCircle,
       color: "from-green-500 to-emerald-500",
