@@ -31,12 +31,12 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      scrolled ? 'bg-cyan-700/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
-          <div className="text-xl font-bold text-slate-800">
-             Developer
+          <div className="text-2xl font-serif text-slate-200">
+             Portfolio
           </div>
           
           {/* Desktop Navigation */}
@@ -45,7 +45,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-slate-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-slate-200 hover:text-blue-600 transition-colors duration-200 text-base font-serif"
               >
                 {item.name}
               </button>

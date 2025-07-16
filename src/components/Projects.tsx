@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Calendar, CheckCircle, MapPin, User } from 'lucide-react';
 
@@ -9,7 +9,7 @@ const Projects = () => {
       description: "A responsive portfolio website showcasing my projects and skills. Features smooth animations, contact form integration, and optimized performance with modern web technologies.",
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "JavaScript"],
-      liveUrl: "https://example.com",
+      liveUrl: "https://portfolio-riyamore-fullstack.netlify.app",
       githubUrl: "https://github.com/riyamore1192/Portfolio-Fullstack-riyamore",
       icon: User,
       color: "from-purple-500 to-pink-500",
@@ -19,7 +19,7 @@ const Projects = () => {
       description: "A comprehensive task management application with user authentication, real-time updates, and intuitive drag-and-drop functionality. Features include task categorization, due dates, priority levels, and progress tracking.",
       image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "Node.js", "MySQL", "JWT", "Tailwind CSS"],
-      liveUrl: "https://example.com",
+      liveUrl: "https://todo-list-applition.netlify.app/login",
       githubUrl: "https://github.com/riyamore1192/To-do-list-app",
       icon: CheckCircle,
       color: "from-green-500 to-emerald-500",
@@ -29,7 +29,7 @@ const Projects = () => {
       description: "A full-stack travel booking platform with secure payment integration, tour package management, and user reviews. Includes admin dashboard for tour management and booking analytics.",
       image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "Node.js", "MySQL", "JWT", "CSS"],
-      liveUrl: "https://example.com",
+      // liveUrl: "https://example.com",
       githubUrl: "https://github.com/riyamore1192/Tour-web-clone",
       icon: MapPin,
       color: "from-blue-500 to-cyan-500",

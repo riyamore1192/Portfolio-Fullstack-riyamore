@@ -1,5 +1,5 @@
-import React from 'react';
-import { Code, Coffee, Heart, GraduationCap } from 'lucide-react';
+// import React from 'react';
+import { Code, Coffee, Heart, } from 'lucide-react';
 
 const About = () => {
   return (
@@ -31,12 +31,7 @@ const About = () => {
             </p>
           </div>
             
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-             {/*<div className="text-center p-6 bg-slate-50 rounded-lg">
-              <GraduationCap className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-              <h3 className="font-semibold text-slate-800 mb-2">Fresh Graduate</h3>
-              <p className="text-sm text-slate-600">Ready to start my tech journey</p>
-            </div> */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-9">
 
             <div className="text-center p-6 bg-slate-50 rounded-lg">
               <Code className="w-8 h-8 text-blue-600 mx-auto mb-3" />

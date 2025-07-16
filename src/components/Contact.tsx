@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,12 +17,34 @@ const Contact = () => {
     });
   };
 
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
+
+    console.log(
+      'Service ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      'Template ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      'Public Key:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    );
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID!,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID!,
+        formData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY!
+      )
+
+      .then(
+        (result) => {
+          console.log('Email sent successfully:', result.text);
+          alert('Message sent successfully!');
+          setFormData({ name: '', email: '', subject: '', message: '' });
+        },
+        (error) => {
+          console.error('Email sending error:', error.text);
+          alert('Failed to send message. Please try again.');
+        }
+      );
   };
 
   return (
@@ -31,22 +54,23 @@ const Contact = () => {
           <h2 className="text-4xl font-bold text-slate-800 mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            I'm always interested in new opportunities and interesting projects. 
+            I'm always interested in new opportunities and interesting projects.
             Let's discuss how we can work together!
           </p>
         </div>
-        
+
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-slate-800 mb-6">Let's Connect</h3>
               <p className="text-slate-600 mb-8 leading-relaxed">
-                Whether you have a project in mind, want to collaborate, or just want to say hello, 
-                I'd love to hear from you. Feel free to reach out through any of the channels below.
+                I'm a Full-Stack Developer passionate about building reliable, high-performance web applications.
+                 If you have a project, opportunity, or idea you'd like to discuss, feel free to reach out 
+                 — I'm always open to meaningful collaborations.
               </p>
             </div>
-            
+
             <div className="space-y-6">
               <div className="flex items-center">
                 <div className="p-3 bg-blue-600 rounded-lg mr-4">
@@ -54,57 +78,57 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-800">Email</h4>
-                  <p className="text-slate-600">more.riya@example.com</p>
+                  <p className="text-slate-600">riyamore1192@gmail.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center">
                 <div className="p-3 bg-blue-600 rounded-lg mr-4">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-800">Phone</h4>
-                  <p className="text-slate-600">+1 (555) 123-4567</p>
+                  <p className="text-slate-600">9998977712</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center">
                 <div className="p-3 bg-blue-600 rounded-lg mr-4">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-800">Location</h4>
-                  <p className="text-slate-600">San Francisco, CA</p>
+                  <p className="text-slate-600"></p>
                 </div>
               </div>
             </div>
-            
+
             {/* Social Links */}
             <div className="pt-8">
               <h4 className="font-semibold text-slate-800 mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/riyamore1192"
                   className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200"
                 >
                   <Github className="w-6 h-6 text-slate-700" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="www.linkedin.com/in/riyamore-developer"
                   className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200"
                 >
                   <Linkedin className="w-6 h-6 text-blue-600" />
                 </a>
-                <a
+                {/* <a
                   href="https://twitter.com"
                   className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200"
                 >
                   <Twitter className="w-6 h-6 text-blue-400" />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
-          
+
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h3 className="text-2xl font-bold text-slate-800 mb-6">Send Message</h3>
@@ -141,7 +165,7 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
                   Subject
@@ -157,7 +181,7 @@ const Contact = () => {
                   placeholder="What's this about?"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
                   Message
@@ -173,7 +197,7 @@ const Contact = () => {
                   placeholder="Tell me about your project or just say hello!"
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg flex items-center justify-center space-x-2"

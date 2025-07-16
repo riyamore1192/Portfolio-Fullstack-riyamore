@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Shield, Globe, Palette, Server } from 'lucide-react';
+import { Database, Shield, Globe, Server } from 'lucide-react';
 
 const Skills = () => {
   const skills = [
@@ -101,7 +101,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-white overflow-hidden">
+    <section id="skills" className="py-3 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowDown, Github, Linkedin, Mail, Sparkles, Code, Zap } from 'lucide-react';
 
 const Hero = () => {
@@ -34,24 +34,25 @@ const Hero = () => {
             <span className="text-white/90 font-medium">Available for opportunities</span>
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
           </div>
-          
+
           <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
               More Riya
             </span>
           </h1>
-          
+
           <div className="text-2xl md:text-3xl text-white/80 mb-4 font-light">
-            Fresher Full-Stack Developer
+            Full-Stack Developer
           </div>
-          
+
           <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Crafting exceptional digital experiences with modern technologies. 
+            Building responsive, scalable web applications with a focus on performance and usability.
             <span className="text-gradient bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent font-semibold">
-              {" "}Ready to bring fresh ideas to your team.
+              {" "}Let’s turn great ideas into impactful products.
             </span>
           </p>
-          
+
+
           {/* Feature Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2">
@@ -67,29 +68,29 @@ const Hero = () => {
               <span className="text-white/90 text-sm font-medium">Problem Solver</span>
             </div>
           </div>
-          
+
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12">
             <a
-              href="https://github.com"
+              href="https://github.com/riyamore1192"
               className="group p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl hover:bg-white/20 hover:scale-110 transform transition-all duration-300"
             >
               <Github className="w-6 h-6 text-white group-hover:text-blue-300 transition-colors" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/riyamore-developer/"
               className="group p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl hover:bg-white/20 hover:scale-110 transform transition-all duration-300"
             >
               <Linkedin className="w-6 h-6 text-white group-hover:text-blue-300 transition-colors" />
             </a>
             <a
-              href="mailto:more.riya@example.com"
+              href="mailto:riyamore1192@gmail.com"
               className="group p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl hover:bg-white/20 hover:scale-110 transform transition-all duration-300"
             >
               <Mail className="w-6 h-6 text-white group-hover:text-blue-300 transition-colors" />
             </a>
           </div>
-          
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <button
@@ -102,40 +103,16 @@ const Hero = () => {
               </span>
             </button>
             <a
-              href="/resume.pdf"
+              href="/Riya_Fullstack_Resume.pdf"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white rounded-2xl font-semibold hover:bg-white/20 hover:border-white/50 transform hover:scale-105 transition-all duration-300"
             >
               Download Resume
             </a>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">10+</div>
-              <div className="text-white/70 text-sm">Projects Built</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">5+</div>
-              <div className="text-white/70 text-sm">Technologies</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">100%</div>
-              <div className="text-white/70 text-sm">Dedication</div>
-            </div>
-          </div>
         </div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <button
-        onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
-      >
-        <div className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
-          <ArrowDown className="w-6 h-6 text-white/70" />
-        </div>
-      </button>
+
     </section>
   );
 };
